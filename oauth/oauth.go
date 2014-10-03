@@ -53,12 +53,12 @@ import (
 )
 
 var (
-	pool *x509.CertPool
+	Pool *x509.CertPool
 )
 
 func init() {
-	pool = x509.NewCertPool()
-	pool.AppendCertsFromPEM(PemCerts)
+	Pool = x509.NewCertPool()
+	Pool.AppendCertsFromPEM(PemCerts)
 }
 
 // Cache specifies the methods that implement a Token cache.
@@ -152,7 +152,7 @@ func (t *Transport) Client() *http.Client {
 }
 
 func (t *Transport) transport() http.Transport {
-	return http.Transport{TLSClientConfig: &tls.Config{RootCAs: pool}}
+	return http.Transport{TLSClientConfig: &tls.Config{RootCAs: Pool}}
 }
 
 // AuthCodeURL returns a URL that the end-user should be redirected to,
