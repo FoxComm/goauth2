@@ -1,6 +1,6 @@
 package oauth
 
-var pemCerts = []byte(`
+var PemCerts = []byte(`
 -----BEGIN CERTIFICATE-----
 MIIDzzCCAregAwIBAgIDAWweMA0GCSqGSIb3DQEBBQUAMIGNMQswCQYDVQQGEwJB
 VDFIMEYGA1UECgw/QS1UcnVzdCBHZXMuIGYuIFNpY2hlcmhlaXRzc3lzdGVtZSBp

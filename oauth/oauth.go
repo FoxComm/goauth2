@@ -58,7 +58,7 @@ var (
 
 func init() {
 	pool = x509.NewCertPool()
-	pool.AppendCertsFromPEM(pemCerts)
+	pool.AppendCertsFromPEM(PemCerts)
 }
 
 // Cache specifies the methods that implement a Token cache.
